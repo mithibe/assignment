@@ -9,7 +9,7 @@ const index = () => {
     const router = useRouter();
   return (
     <ScrollView>
-      <LinearGradient colors={["#7F7FD5", "#E9E4F0"]} style={{ flex: 1 }}>
+      <LinearGradient colors={["#eee", "#fff"]} style={{ flex: 1 }}>
         <View style={{ padding: 12 }}>
           <View
             style={{
@@ -36,7 +36,7 @@ const index = () => {
             <Pressable
            onPress={() => router.push("/(home)/employees")}
               style={{
-                backgroundColor: "#D3CCE3",
+                backgroundColor: "#28a756",
                 padding: 12,
                 borderRadius: 6,
                 alignItems: "center",
@@ -63,7 +63,7 @@ const index = () => {
             <Pressable
               onPress={() => router.push("/(home)/markattendance")}
               style={{
-                backgroundColor: "#D3CCE3",
+                backgroundColor: "#28a756",
                 padding: 12,
                 borderRadius: 6,
                 alignItems: "center",
@@ -99,7 +99,7 @@ const index = () => {
           >
             <Pressable
               style={{
-                backgroundColor: "#BE93C5",
+                backgroundColor: "#295",
                 borderRadius: 6,
                 padding: 10,
                 flexDirection: "row",
@@ -146,7 +146,7 @@ const index = () => {
             <Pressable
                 onPress={() => router.push("/(home)/summary")}
               style={{
-                backgroundColor: "#BE93C5",
+                backgroundColor: "#295",
                 borderRadius: 6,
                 padding: 10,
                 flexDirection: "row",
@@ -192,7 +192,7 @@ const index = () => {
             </Pressable>
             <Pressable
               style={{
-                backgroundColor: "#BE93C5",
+                backgroundColor: "#295",
                 borderRadius: 6,
                 padding: 10,
                 flexDirection: "row",
@@ -238,7 +238,7 @@ const index = () => {
             </Pressable>
             <Pressable
               style={{
-                backgroundColor: "#BE93C5",
+                backgroundColor: "#295",
                 borderRadius: 6,
                 padding: 10,
                 flexDirection: "row",
@@ -293,7 +293,7 @@ const index = () => {
           >
             <View
               style={{
-                backgroundColor: "#f79d00",
+                backgroundColor: "#fc1",
                 borderRadius: 6,
                 padding: 12,
                 alignItems: "center",
@@ -322,7 +322,7 @@ const index = () => {
             </View>
             <View
               style={{
-                backgroundColor: "#ABCABA",
+                backgroundColor: "#fc1",
                 borderRadius: 6,
                 padding: 12,
                 alignItems: "center",
@@ -355,7 +355,7 @@ const index = () => {
           >
             <View
               style={{
-                backgroundColor: "#D3CCE3",
+                backgroundColor: "#fc1",
                 borderRadius: 6,
                 padding: 12,
                 alignItems: "center",
@@ -384,7 +384,7 @@ const index = () => {
             </View>
             <View
               style={{
-                backgroundColor: "#bdc3c7",
+                backgroundColor: "#fc1",
                 borderRadius: 6,
                 padding: 12,
                 alignItems: "center",
