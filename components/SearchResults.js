@@ -26,9 +26,9 @@ const SearchResults = ({ data, input, setInput }) => {
                 >
                   <Text style={{color:"white",fontSize:16}}>{item?.studentName?.charAt(0)}</Text>
                 </View>
-
                 <View>
                   <Text style={{fontSize:16,fontWeight:"bold"}}>{item?.studentName}</Text>
+
                   {/* <Text style={{marginTop:5,color:"gray"}}>
                     {item?.designation} ({item?.studentId})
                   </Text> */}
