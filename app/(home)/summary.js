@@ -80,7 +80,7 @@ const summary = () => {
                   height: 50,
                   borderRadius: 8,
                   padding: 10,
-                  backgroundColor: "#4b6cb7",
+                  backgroundColor: "#295",
                   alignItems: "center",
                   justifyContent: "center",
                 }}

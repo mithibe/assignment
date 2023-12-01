@@ -27,7 +27,7 @@ const markattendance = () => {
   useEffect(() => {
     const fetchEmployeeData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/employees");
+        const response = await axios.get("http://192.168.2.103:8000/employees");
         setEmployees(response.data);
       } catch (error) {
         console.log("error fetching employee data", error);
@@ -63,32 +63,9 @@ const markattendance = () => {
     };
   });
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={{ flex: 1, backgroundColor: "white", marginTop: '70%', height:'30%'}}>
       <Pressable>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            gap: 10,
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginVertical: 20,
-          }}
-        >
-          <AntDesign
-            onPress={goToPrevDay}
-            name="left"
-            size={24}
-            color="black"
-          />
-          <Text>{formatDate(currentDate)}</Text>
-          <AntDesign
-            onPress={goToNextDay}
-            name="right"
-            size={24}
-            color="black"
-          />
-        </View>
+       
 
         <View style={{ marginHorizontal: 12 }}>
           {employeeWithAttendance.map((item, index) => (
@@ -118,7 +95,7 @@ const markattendance = () => {
                   height: 50,
                   borderRadius: 8,
                   padding: 10,
-                  backgroundColor: "#4b6cb7",
+                  backgroundColor: "#295",
                   alignItems: "center",
                   justifyContent: "center",
                 }}
@@ -157,6 +134,34 @@ const markattendance = () => {
             </Pressable>
           ))}
         </View>
+
+        <View
+          style={{
+            position: 'relative',
+            bottom: -300,
+            flexDirection: "row",
+            alignItems: "center",
+            gap: 10,
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginVertical: 20,
+          }}
+        >
+          <AntDesign
+            onPress={goToPrevDay}
+            name="left"
+            size={24}
+            color="black"
+          />
+          <Text>{formatDate(currentDate)}</Text>
+          <AntDesign
+            onPress={goToNextDay}
+            name="right"
+            size={24}
+            color="black"
+          />
+        </View>
+
       </Pressable>
     </View>
   );

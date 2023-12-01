@@ -53,21 +53,8 @@ const user = () => {
     }
   };
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          gap: 10,
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginVertical: 20,
-        }}
-      >
-        <AntDesign onPress={goToPrevDay} name="left" size={24} color="black" />
-        <Text>{formatDate(currentDate)}</Text>
-        <AntDesign onPress={goToNextDay} name="right" size={24} color="black" />
-      </View>
+    <View style={{ flex: 1, backgroundColor: "white", marginTop: '70%'}}>
+      
 
       <Pressable
         style={{
@@ -83,7 +70,7 @@ const user = () => {
             height: 50,
             borderRadius: 8,
             padding: 10,
-            backgroundColor: "#4b6cb7",
+            backgroundColor: "#295",
             alignItems: "center",
             justifyContent: "center",
           }}
@@ -104,6 +91,21 @@ const user = () => {
       <Text style={{ fontSize: 16, fontWeight: "500", marginHorizontal: 12 }}>
         Basic Pay : {params?.salary}
       </Text>
+
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          gap: 10,
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginVertical: 20,
+        }}
+      >
+        <AntDesign onPress={goToPrevDay} name="left" size={24} color="black" />
+        <Text>{formatDate(currentDate)}</Text>
+        <AntDesign onPress={goToNextDay} name="right" size={24} color="black" />
+      </View>
       <View style={{ marginHorizontal: 12 }}>
         <Text
           style={{
@@ -126,7 +128,7 @@ const user = () => {
           <Pressable
             onPress={() => setAttendanceStatus("present")}
             style={{
-              backgroundColor: "#C4E0E5",
+              backgroundColor: "#2957",
               padding: 10,
               borderRadius: 8,
               flexDirection: "row",
@@ -146,7 +148,7 @@ const user = () => {
           <Pressable
             onPress={() => setAttendanceStatus("absent")}
             style={{
-              backgroundColor: "#C4E0E5",
+              backgroundColor: "#2957",
               padding: 10,
               borderRadius: 8,
               flexDirection: "row",
@@ -174,7 +176,7 @@ const user = () => {
           <Pressable
             onPress={() => setAttendanceStatus("halfday")}
             style={{
-              backgroundColor: "#C4E0E5",
+              backgroundColor: "#2957",
               padding: 10,
               borderRadius: 8,
               flexDirection: "row",
@@ -194,7 +196,7 @@ const user = () => {
           <Pressable
             onPress={() => setAttendanceStatus("holiday")}
             style={{
-              backgroundColor: "#C4E0E5",
+              backgroundColor: "#2957",
               padding: 10,
               borderRadius: 8,
               flexDirection: "row",
@@ -212,7 +214,7 @@ const user = () => {
           </Pressable>
         </View>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
-          <TextInput
+          {/* <TextInput
             style={{
               borderRadius: 6,
               marginTop: 10,
@@ -235,14 +237,14 @@ const user = () => {
             }}
             placeholderTextColor="black"
             placeholder="Extra Bonus"
-          />
+          /> */}
         </View>
 
         <Pressable
           onPress={submitAttendance}
           style={{
             padding: 15,
-            backgroundColor: "#00c6ff",
+            backgroundColor: "#295",
             width: 200,
             marginLeft: "auto",
             marginRight: "auto",

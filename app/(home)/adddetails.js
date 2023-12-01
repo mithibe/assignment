@@ -60,54 +60,54 @@ const adddetails = () => {
     <ScrollView style={{ flex: 1, backgroundColor: "white" }}>
       <View style={{ padding: 10 }}>
         <Text style={{ fontSize: 17, fontWeight: "bold" }}>
-          Add a New Employee
+          Add a New Student
         </Text>
 
         <TextInput
           style={{
             padding: 10,
-            borderColor: "#D0D0D0",
+            borderColor: "#aaa",
             borderWidth: 1,
             marginTop: 10,
             borderRadius: 5,
           }}
           placeholder="India"
-          placeholderTextColor={"black"}
+          placeholderTextColor={"#999"}
         />
 
         <View style={{ marginVertical: 10 }}>
           <Text style={{ fontSize: 17, fontWeight: "bold" }}>
-            Full Name (First and last Name)
+            First Name
           </Text>
           <TextInput
             value={name}
             onChangeText={(text) => setName(text)}
             style={{
               padding: 10,
-              borderColor: "#D0D0D0",
+              borderColor: "#aaa",
               borderWidth: 1,
               marginTop: 10,
               borderRadius: 5,
             }}
             placeholder="enter your name"
-            placeholderTextColor={"black"}
+            placeholderTextColor={"#999"}
           />
         </View>
 
         <View>
-          <Text style={{ fontSize: 17, fontWeight: "bold" }}>Employee Id</Text>
+          <Text style={{ fontSize: 17, fontWeight: "bold" }}>Admission Number</Text>
           <TextInput
             value={employeeId}
             onChangeText={(text) => setEmployeeId(text)}
             style={{
               padding: 10,
-              borderColor: "#D0D0D0",
+              borderColor: "#aaa",
               borderWidth: 1,
               marginTop: 10,
               borderRadius: 5,
             }}
             placeholder="Employee Id"
-            placeholderTextColor={"black"}
+            placeholderTextColor={"#999"}
           />
         </View>
 
@@ -118,13 +118,13 @@ const adddetails = () => {
             onChangeText={(text) => setDesignation(text)}
             style={{
               padding: 10,
-              borderColor: "#D0D0D0",
+              borderColor: "#aaa",
               borderWidth: 1,
               marginTop: 10,
               borderRadius: 5,
             }}
             placeholder="Designation"
-            placeholderTextColor={"black"}
+            placeholderTextColor={"#999"}
           />
         </View>
 
@@ -137,13 +137,13 @@ const adddetails = () => {
             onChangeText={(text) => setMobileNo(text)}
             style={{
               padding: 10,
-              borderColor: "#D0D0D0",
+              borderColor: "#aaa",
               borderWidth: 1,
               marginTop: 10,
               borderRadius: 5,
             }}
             placeholder="Mobile No"
-            placeholderTextColor={"black"}
+            placeholderTextColor={"#999"}
           />
         </View>
 
@@ -156,13 +156,13 @@ const adddetails = () => {
             onChangeText={(text) => setDob(text)}
             style={{
               padding: 10,
-              borderColor: "#D0D0D0",
+              borderColor: "#aaa",
               borderWidth: 1,
               marginTop: 10,
               borderRadius: 5,
             }}
             placeholder="Enter Date of Birth"
-            placeholderTextColor={"black"}
+            placeholderTextColor={"#999"}
           />
         </View>
 
@@ -173,16 +173,16 @@ const adddetails = () => {
             onChangeText={(text) => setJoiningDate(text)}
             style={{
               padding: 10,
-              borderColor: "#D0D0D0",
+              borderColor: "#aaa",
               borderWidth: 1,
               marginTop: 10,
               borderRadius: 5,
             }}
             placeholder="Joining Date"
-            placeholderTextColor={"black"}
+            placeholderTextColor={"#999"}
           />
         </View>
-        <View
+        {/* <View
           style={{
             flexDirection: "row",
             alignItems: "center",
@@ -192,23 +192,23 @@ const adddetails = () => {
         >
           <Text>Active Employee</Text>
           <Text>True</Text>
-        </View>
-        <View style={{ marginVertical: 10 }}>
+        </View> */}
+        {/* <View style={{ marginVertical: 10 }}>
           <Text style={{ fontSize: 17, fontWeight: "bold" }}>Salary</Text>
           <TextInput
             value={salary}
             onChangeText={(text) => setSalary(text)}
             style={{
               padding: 10,
-              borderColor: "#D0D0D0",
+              borderColor: "#aaa",
               borderWidth: 1,
               marginTop: 10,
               borderRadius: 5,
             }}
             placeholder="Enter Salary"
-            placeholderTextColor={"black"}
+            placeholderTextColor={"#999"}
           />
-        </View>
+        </View> */}
 
         <View>
           <Text style={{ fontSize: 17, fontWeight: "bold" }}>Address</Text>
@@ -217,20 +217,20 @@ const adddetails = () => {
             onChangeText={(text) => setAddress(text)}
             style={{
               padding: 10,
-              borderColor: "#D0D0D0",
+              borderColor: "#aaa",
               borderWidth: 1,
               marginTop: 10,
               borderRadius: 5,
             }}
             placeholder="Enter Address"
-            placeholderTextColor={"black"}
+            placeholderTextColor={"#999"}
           />
         </View>
 
         <Pressable
           onPress={handleRegister}
           style={{
-            backgroundColor: "#ABCABA",
+            backgroundColor: "#295",
             padding: 10,
             marginTop: 20,
             justifyContent: "center",

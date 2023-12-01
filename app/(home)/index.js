@@ -9,89 +9,14 @@ const index = () => {
     const router = useRouter();
   return (
     <ScrollView>
-      <LinearGradient colors={["#eee", "#fff"]} style={{ flex: 1 }}>
+      <LinearGradient colors={["#eee", "#eee"]} style={{ flex: 1 }}>
         <View style={{ padding: 12 }}>
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <Feather name="bar-chart" size={24} color="black" />
-            <Text style={{ fontSize: 16, fontWeight: "600" }}>
-              Employee Managament System
-            </Text>
-            <Entypo name="lock" size={24} color="black" />
-          </View>
+          {/* r */}
 
           <View
             style={{
-              marginTop: 20,
-              flexDirection: "row",
-              alignItems: "center",
-              gap: 20,
-            }}
-          >
-            <Pressable
-           onPress={() => router.push("/(home)/employees")}
-              style={{
-                backgroundColor: "#28a756",
-                padding: 12,
-                borderRadius: 6,
-                alignItems: "center",
-                justifyContent: "center",
-                flex: 1,
-              }}
-            >
-              <View
-                style={{
-                  width: 50,
-                  height: 50,
-                  borderRadius: 25,
-                  backgroundColor: "white",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Ionicons name="ios-people-sharp" size={24} color="black" />
-              </View>
-              <Text style={{ marginTop: 7, fontWeight: "600" }}>
-                Employee List
-              </Text>
-            </Pressable>
-            <Pressable
-              onPress={() => router.push("/(home)/markattendance")}
-              style={{
-                backgroundColor: "#28a756",
-                padding: 12,
-                borderRadius: 6,
-                alignItems: "center",
-                justifyContent: "center",
-                flex: 1,
-              }}
-            >
-              <View
-                style={{
-                  width: 50,
-                  height: 50,
-                  borderRadius: 25,
-                  backgroundColor: "white",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Ionicons name="ios-people-sharp" size={24} color="black" />
-              </View>
-              <Text style={{ marginTop: 7, fontWeight: "600" }}>
-                Mark Attendance
-              </Text>
-            </Pressable>
-          </View>
-          <View
-            style={{
-              marginTop: 20,
-              backgroundColor: "white",
+              marginTop: '70%',
+              backgroundColor: "#fff",
               paddingHorizontal: 10,
               paddingVertical: 10,
               borderRadius: 7,
@@ -283,7 +208,71 @@ const index = () => {
               </View>
             </Pressable>
           </View>
+
           <View
+            style={{
+              marginTop: 20,
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 20,
+            }}
+          >
+            <Pressable
+           onPress={() => router.push("/(home)/employees")}
+              style={{
+                backgroundColor: "#295",
+                padding: 12,
+                borderRadius: 6,
+                alignItems: "center",
+                justifyContent: "center",
+                flex: 1,
+              }}
+            >
+              <View
+                style={{
+                  width: 50,
+                  height: 50,
+                  borderRadius: 25,
+                  backgroundColor: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Ionicons name="ios-people-sharp" size={24} color="black" />
+              </View>
+              <Text style={{ marginTop: 7, fontWeight: "600" }}>
+                Students List
+              </Text>
+            </Pressable>
+            <Pressable
+              onPress={() => router.push("/(home)/markattendance")}
+              style={{
+                backgroundColor: "#295",
+                padding: 12,
+                borderRadius: 6,
+                alignItems: "center",
+                justifyContent: "center",
+                flex: 1,
+              }}
+            >
+              <View
+                style={{
+                  width: 50,
+                  height: 50,
+                  borderRadius: 25,
+                  backgroundColor: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Ionicons name="ios-people-sharp" size={24} color="black" />
+              </View>
+              <Text style={{ marginTop: 7, fontWeight: "600" }}>
+                Mark Attendance
+              </Text>
+            </Pressable>
+          </View>
+          {/* <View
             style={{
               marginTop: 20,
               flexDirection: "row",
@@ -344,8 +333,8 @@ const index = () => {
               </View>
               <Text style={{ marginTop: 7 }}>Increased Workflow</Text>
             </View>
-          </View>
-          <View
+          </View> */}
+          {/* <View
             style={{
               marginTop: 20,
               flexDirection: "row",
@@ -406,7 +395,7 @@ const index = () => {
               </View>
               <Text style={{ marginTop: 7 }}>Employee Performance</Text>
             </View>
-          </View>
+          </View> */}
         </View>
       </LinearGradient>
     </ScrollView>

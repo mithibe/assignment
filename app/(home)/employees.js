@@ -13,7 +13,7 @@ const employees = () => {
   useEffect(() => {
     const fetchEmployeeData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/employees");
+        const response = await axios.get("http://192.168.2.103:8000/employees");
         setEmployees(response.data);
       } catch (error) {
         console.log("error fetching employee data", error);
@@ -23,12 +23,13 @@ const employees = () => {
   }, []);
   console.log(employees);
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={{ flex: 1, backgroundColor: "#eee" }}>
       <View
         style={{
           flexDirection: "row",
           alignItems: "center",
           backgroundColor: "white",
+          marginBottom: '70%',
         }}
       >
         <Ionicons
@@ -66,7 +67,7 @@ const employees = () => {
           {employees.length > 0 && (
             <View>
               <Pressable onPress={() => router.push("/(home)/adddetails")}>
-                <AntDesign name="pluscircle" size={30} color="#0072b1" />
+                <AntDesign name="pluscircle" size={30} color="#295" />
               </Pressable>
             </View>
           )}
