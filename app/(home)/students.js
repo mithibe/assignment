@@ -7,16 +7,7 @@ import { useRouter } from "expo-router";
 import SearchResults from "../../components/SearchResults";
 
 const students = () => {
-<<<<<<< Updated upstream
-  const [students, setEmployees] = useState([]);
-  const [input, setInput] = useState("");
-  const router = useRouter();
-  useEffect(() => {
-    const fetchEmployeeData = async () => {
-      try {
-        const response = await axios.get("http://192.168.2.103:8000/students");
-        setEmployees(response.data);
-=======
+
   const [students, setstudents] = useState([]);
   const [input, setInput] = useState("");
   const router = useRouter();
@@ -25,16 +16,11 @@ const students = () => {
       try {
         const response = await axios.get("http://192.168.2.103:8000/students");
         setstudents(response.data);
->>>>>>> Stashed changes
       } catch (error) {
         console.log("error fetching student data", error);
       }
     };
-<<<<<<< Updated upstream
-    fetchEmployeeData();
-=======
     fetchstudentData();
->>>>>>> Stashed changes
   }, []);
   console.log(students);
   return (
@@ -96,11 +82,7 @@ const students = () => {
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
           <Text>No Data</Text>
-<<<<<<< Updated upstream
-          <Text>Press on the plus button and add your Employee</Text>
-=======
           <Text>Press on the plus button and add your student</Text>
->>>>>>> Stashed changes
           <Pressable onPress={() => router.push("/(home)/adddetails")}>
             <AntDesign
               style={{ marginTop: 30 }}
