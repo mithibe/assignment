@@ -6,22 +6,22 @@ import { AntDesign } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import SearchResults from "../../components/SearchResults";
 
-const employees = () => {
-  const [employees, setEmployees] = useState([]);
+const students = () => {
+  const [students, setEmployees] = useState([]);
   const [input, setInput] = useState("");
   const router = useRouter();
   useEffect(() => {
     const fetchEmployeeData = async () => {
       try {
-        const response = await axios.get("http://192.168.2.103:8000/employees");
+        const response = await axios.get("http://192.168.2.103:8000/students");
         setEmployees(response.data);
       } catch (error) {
-        console.log("error fetching employee data", error);
+        console.log("error fetching student data", error);
       }
     };
     fetchEmployeeData();
   }, []);
-  console.log(employees);
+  console.log(students);
   return (
     <View style={{ flex: 1, backgroundColor: "#eee" }}>
       <View
@@ -29,7 +29,7 @@ const employees = () => {
           flexDirection: "row",
           alignItems: "center",
           backgroundColor: "white",
-          marginBottom: '70%',
+          marginTop : '70%',
         }}
       >
         <Ionicons
@@ -64,7 +64,7 @@ const employees = () => {
             placeholder="Search"
           />
 
-          {employees.length > 0 && (
+          {students.length > 0 && (
             <View>
               <Pressable onPress={() => router.push("/(home)/adddetails")}>
                 <AntDesign name="pluscircle" size={30} color="#295" />
@@ -74,8 +74,8 @@ const employees = () => {
         </Pressable>
       </View>
 
-      {employees.length > 0 ? (
-        <SearchResults data={employees} input={input} setInput={setInput} />
+      {students.length > 0 ? (
+        <SearchResults data={students} input={input} setInput={setInput} />
       ) : (
         <View
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
@@ -96,6 +96,6 @@ const employees = () => {
   );
 };
 
-export default employees;
+export default students;
 
 const styles = StyleSheet.create({});

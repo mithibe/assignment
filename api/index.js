@@ -69,13 +69,13 @@ app.post("/addEmployee", async (req, res) => {
   }
 });
 
-//endpoint to fetch all the employees
-app.get("/employees", async (req, res) => {
+//endpoint to fetch all the students
+app.get("/students", async (req, res) => {
   try {
-    const employees = await Employee.find();
-    res.status(200).json(employees);
+    const students = await Employee.find();
+    res.status(200).json(students);
   } catch (error) {
-    res.status(500).json({ message: "Failed to retrieve the employees" });
+    res.status(500).json({ message: "Failed to retrieve the students" });
   }
 });
 
@@ -117,7 +117,7 @@ app.get("/attendance", async (req, res) => {
   }
 });
 
-app.get("/attendance-report-all-employees", async (req, res) => {
+app.get("/attendance-report-all-students", async (req, res) => {
     try {
       const { month, year } = req.query;
   
@@ -128,7 +128,7 @@ app.get("/attendance-report-all-employees", async (req, res) => {
         .toDate();
       const endDate = moment(startDate).endOf("month").toDate();
   
-      // Aggregate attendance data for all employees and date range
+      // Aggregate attendance data for all students and date range
       const report = await Attendance.aggregate([
         {
           $match: {
@@ -178,7 +178,7 @@ app.get("/attendance-report-all-employees", async (req, res) => {
         },
         {
           $lookup: {
-            from: "employees", // Name of the employee collection
+            from: "students", // Name of the employee collection
             localField: "_id",
             foreignField: "employeeId",
             as: "employeeDetails",

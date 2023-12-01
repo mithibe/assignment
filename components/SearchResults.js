@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, Text, View, FlatList, Pressable } from "react-native";
 import React from "react";
 
 const SearchResults = ({ data, input, setInput }) => {
@@ -9,7 +9,8 @@ const SearchResults = ({ data, input, setInput }) => {
         renderItem={({ item }) => {
           if (item?.employeeName.toLowerCase().includes(input.toLowerCase())) {
             return (
-              <View
+             <Pressable>
+               <View
                 style={{ marginVertical: 10, gap: 10, flexDirection: "row" }}
               >
                 <View
@@ -18,7 +19,7 @@ const SearchResults = ({ data, input, setInput }) => {
                     height: 50,
                     borderRadius: 8,
                     padding: 10,
-                    backgroundColor: "#4b6cb7",
+                    backgroundColor: "#295",
                     alignItems: "center",
                     justifyContent: "center",
                   }}
@@ -28,11 +29,12 @@ const SearchResults = ({ data, input, setInput }) => {
 
                 <View>
                   <Text style={{fontSize:16,fontWeight:"bold"}}>{item?.employeeName}</Text>
-                  <Text style={{marginTop:5,color:"gray"}}>
+                  {/* <Text style={{marginTop:5,color:"gray"}}>
                     {item?.designation} ({item?.employeeId})
-                  </Text>
+                  </Text> */}
                 </View>
               </View>
+             </Pressable>
             );
           }
         }}

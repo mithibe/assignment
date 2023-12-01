@@ -13,7 +13,7 @@ const index = () => {
         <View style={{ padding: 12 }}>
           {/* r */}
 
-          <View
+          {/* <View
             style={{
               marginTop: '70%',
               backgroundColor: "#fff",
@@ -207,18 +207,18 @@ const index = () => {
                 <Entypo name="chevron-right" size={24} color="black" />
               </View>
             </Pressable>
-          </View>
+          </View> */}
 
           <View
             style={{
-              marginTop: 20,
+              marginTop: '70%',
               flexDirection: "row",
               alignItems: "center",
               gap: 20,
             }}
           >
             <Pressable
-           onPress={() => router.push("/(home)/employees")}
+           onPress={() => router.push("/(home)/students")}
               style={{
                 backgroundColor: "#295",
                 padding: 12,
@@ -244,7 +244,7 @@ const index = () => {
                 Students List
               </Text>
             </Pressable>
-            <Pressable
+            {/* <Pressable
               onPress={() => router.push("/(home)/markattendance")}
               style={{
                 backgroundColor: "#295",
@@ -270,7 +270,7 @@ const index = () => {
               <Text style={{ marginTop: 7, fontWeight: "600" }}>
                 Mark Attendance
               </Text>
-            </Pressable>
+            </Pressable> */}
           </View>
           {/* <View
             style={{

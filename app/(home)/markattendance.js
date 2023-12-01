@@ -23,11 +23,11 @@ const markattendance = () => {
     return date.format("MMMM D, YYYY");
   };
 
-  const [employees, setEmployees] = useState([]);
+  const [students, setEmployees] = useState([]);
   useEffect(() => {
     const fetchEmployeeData = async () => {
       try {
-        const response = await axios.get("http://192.168.2.103:8000/employees");
+        const response = await axios.get("http://192.168.2.103:8000/students");
         setEmployees(response.data);
       } catch (error) {
         console.log("error fetching employee data", error);
@@ -52,7 +52,7 @@ const markattendance = () => {
   useEffect(() => {
     fetchAttendanceData();
   }, [currentDate]);
-  const employeeWithAttendance = employees.map((employee) => {
+  const employeeWithAttendance = students.map((employee) => {
     const attendanceRecord = attendance.find(
       (record) => record.employeeId === employee.employeeId
     );

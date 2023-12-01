@@ -27,13 +27,13 @@ const adddetails = () => {
       phoneNumber: mobileNo,
       dateOfBirth: dob,
       joiningDate: joiningDate,
-      activeEmployee: true,
-      salary: salary,
+      // activeEmployee: true,
+      // salary: salary,
       address: address,
     };
 
     axios
-      .post("http://localhost:8000/addEmployee", employeeData)
+      .post("http://localhost:5000/addEmployee", employeeData)
       .then((response) => {
         Alert.alert(
           "Registration Successful",
@@ -43,7 +43,7 @@ const adddetails = () => {
         setEmployeeId("");
         setDob("");
         setMobileNo("");
-        setSalary("");
+        // setSalary("");
         setAddress("");
         setJoiningDate("");
         setDesignation("");
@@ -57,13 +57,13 @@ const adddetails = () => {
       });
   };
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: "white" }}>
+    <ScrollView style={{ flex: 1, backgroundColor: "white", marginTop: '70%' }}>
       <View style={{ padding: 10 }}>
         <Text style={{ fontSize: 17, fontWeight: "bold" }}>
           Add a New Student
         </Text>
 
-        <TextInput
+        {/* <TextInput
           style={{
             padding: 10,
             borderColor: "#aaa",
@@ -73,7 +73,7 @@ const adddetails = () => {
           }}
           placeholder="India"
           placeholderTextColor={"#999"}
-        />
+        /> */}
 
         <View style={{ marginVertical: 10 }}>
           <Text style={{ fontSize: 17, fontWeight: "bold" }}>
