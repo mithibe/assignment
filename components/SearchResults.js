@@ -28,9 +28,10 @@ const SearchResults = ({ data, input, setInput }) => {
                 </View>
                 <View>
                   <Text style={{fontSize:16,fontWeight:"bold"}}>{item?.studentName}</Text>
-                  <Text style={{marginTop:5,color:"gray"}}>
+
+                  {/* <Text style={{marginTop:5,color:"gray"}}>
                     {item?.designation} ({item?.studentId})
-                  </Text>
+                  </Text> */}
                 </View>
               </View>
              </Pressable>

@@ -7,7 +7,6 @@ import { useRouter } from "expo-router";
 import SearchResults from "../../components/SearchResults";
 
 const students = () => {
-
   const [students, setstudents] = useState([]);
   const [input, setInput] = useState("");
   const router = useRouter();
