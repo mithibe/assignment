@@ -7,7 +7,7 @@ const SearchResults = ({ data, input, setInput }) => {
       <FlatList
         data={data}
         renderItem={({ item }) => {
-          if (item?.employeeName.toLowerCase().includes(input.toLowerCase())) {
+          if (item?.studentName.toLowerCase().includes(input.toLowerCase())) {
             return (
              <Pressable>
                <View
@@ -24,13 +24,13 @@ const SearchResults = ({ data, input, setInput }) => {
                     justifyContent: "center",
                   }}
                 >
-                  <Text style={{color:"white",fontSize:16}}>{item?.employeeName?.charAt(0)}</Text>
+                  <Text style={{color:"white",fontSize:16}}>{item?.studentName?.charAt(0)}</Text>
                 </View>
 
                 <View>
-                  <Text style={{fontSize:16,fontWeight:"bold"}}>{item?.employeeName}</Text>
+                  <Text style={{fontSize:16,fontWeight:"bold"}}>{item?.studentName}</Text>
                   {/* <Text style={{marginTop:5,color:"gray"}}>
-                    {item?.designation} ({item?.employeeId})
+                    {item?.designation} ({item?.studentId})
                   </Text> */}
                 </View>
               </View>

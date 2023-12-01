@@ -7,19 +7,19 @@ import { useRouter } from "expo-router";
 import SearchResults from "../../components/SearchResults";
 
 const students = () => {
-  const [students, setEmployees] = useState([]);
+  const [students, setstudents] = useState([]);
   const [input, setInput] = useState("");
   const router = useRouter();
   useEffect(() => {
-    const fetchEmployeeData = async () => {
+    const fetchstudentData = async () => {
       try {
         const response = await axios.get("http://192.168.2.103:8000/students");
-        setEmployees(response.data);
+        setstudents(response.data);
       } catch (error) {
         console.log("error fetching student data", error);
       }
     };
-    fetchEmployeeData();
+    fetchstudentData();
   }, []);
   console.log(students);
   return (
@@ -81,7 +81,7 @@ const students = () => {
           style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
         >
           <Text>No Data</Text>
-          <Text>Press on the plus button and add your Employee</Text>
+          <Text>Press on the plus button and add your student</Text>
           <Pressable onPress={() => router.push("/(home)/adddetails")}>
             <AntDesign
               style={{ marginTop: 30 }}

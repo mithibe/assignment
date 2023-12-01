@@ -12,7 +12,7 @@ import axios from "axios";
 
 const adddetails = () => {
   const [name, setName] = useState("");
-  const [employeeId, setEmployeeId] = useState("");
+  const [studentId, setstudentId] = useState("");
   const [dob, setDob] = useState("");
   const [mobileNo, setMobileNo] = useState("");
   const [joiningDate, setJoiningDate] = useState("");
@@ -20,27 +20,27 @@ const adddetails = () => {
   const [address, setAddress] = useState("");
   const [designation, setDesignation] = useState("");
   const handleRegister = () => {
-    const employeeData = {
-      employeeName: name,
-      employeeId: employeeId,
+    const studentData = {
+      studentName: name,
+      studentId: studentId,
       designation: designation,
       phoneNumber: mobileNo,
       dateOfBirth: dob,
       joiningDate: joiningDate,
-      // activeEmployee: true,
+      // activestudent: true,
       // salary: salary,
       address: address,
     };
 
     axios
-      .post("http://localhost:5000/addEmployee", employeeData)
+      .post("http://localhost:5000/addstudent", studentData)
       .then((response) => {
         Alert.alert(
           "Registration Successful",
           "You have been registered successfully"
         );
         setName("");
-        setEmployeeId("");
+        setstudentId("");
         setDob("");
         setMobileNo("");
         // setSalary("");
@@ -97,8 +97,8 @@ const adddetails = () => {
         <View>
           <Text style={{ fontSize: 17, fontWeight: "bold" }}>Admission Number</Text>
           <TextInput
-            value={employeeId}
-            onChangeText={(text) => setEmployeeId(text)}
+            value={studentId}
+            onChangeText={(text) => setstudentId(text)}
             style={{
               padding: 10,
               borderColor: "#aaa",
@@ -106,13 +106,13 @@ const adddetails = () => {
               marginTop: 10,
               borderRadius: 5,
             }}
-            placeholder="Employee Id"
+            placeholder="student Id"
             placeholderTextColor={"#999"}
           />
         </View>
 
         <View style={{ marginVertical: 10 }}>
-          <Text style={{ fontSize: 17, fontWeight: "bold" }}>Designation</Text>
+          <Text style={{ fontSize: 17, fontWeight: "bold" }}>Course</Text>
           <TextInput
             value={designation}
             onChangeText={(text) => setDesignation(text)}
@@ -123,7 +123,7 @@ const adddetails = () => {
               marginTop: 10,
               borderRadius: 5,
             }}
-            placeholder="Designation"
+            placeholder="Course"
             placeholderTextColor={"#999"}
           />
         </View>
@@ -190,7 +190,7 @@ const adddetails = () => {
             marginTop: 10,
           }}
         >
-          <Text>Active Employee</Text>
+          <Text>Active student</Text>
           <Text>True</Text>
         </View> */}
         {/* <View style={{ marginVertical: 10 }}>
@@ -239,7 +239,7 @@ const adddetails = () => {
           }}
         >
           <Text style={{ fontWeight: "bold", color: "white" }}>
-            Add Employee
+            Add student
           </Text>
         </Pressable>
       </View>
